@@ -1,34 +1,24 @@
 package com.juanfe.vendebien;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 
+public class ConsultarActivity extends ActionBarActivity {
 
-public class MainActivity extends ActionBarActivity {
-    Button consultar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
+        setContentView(R.layout.activity_consultar);
     }
 
-    public void envioConsultar (View v){
-        Intent intento = new Intent(getBaseContext(),ConsultarActivity.class);
-        startActivity(intento);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_consultar, menu);
         return true;
     }
 
@@ -46,11 +36,4 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void consultarPrecios(View v){
-        Intent intento = new Intent(this,ConsultarActivity.class);
-        startActivity(intento);
-    }
-
-
 }
